@@ -1,0 +1,10 @@
+node_modules/
+*npm-debug.log
+*.DS_Store
+dist/
+.cache/
+.serverless/
+*.swp
+.localalias
+coverage/
+.nyc_output/

@@ -1,0 +1,23 @@
+{
+  "name": "serverless-plugin-kinesis-consumer",
+  "version": "0.0.0",
+  "description": "",
+  "main": "serverless-plugin-kinesis-consumer.js",
+  "scripts": {
+    "test": "nyc --all ava",
+    "posttest": "eslint ."
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "aws-sdk": "^2.359.0",
+    "eslint": "^5.9.0",
+    "nyc": "^13.1.0",
+    "sinon": "^7.1.1"
+  },
+  "dependencies": {
+    "add-custom-resource": "^3.1.3",
+    "lambda-cloudformation-resource": "^1.0.1"
+  }
+}
