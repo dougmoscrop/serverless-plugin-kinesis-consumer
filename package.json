@@ -1,6 +1,6 @@
 {
   "name": "serverless-plugin-kinesis-consumer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "serverless-plugin-kinesis-consumer.js",
   "scripts": {
