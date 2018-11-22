@@ -1,13 +1,22 @@
 {
   "name": "serverless-plugin-kinesis-consumer",
   "version": "1.0.1",
-  "description": "",
+  "description": "Enable enhanced fan out for Kinesis Stream events in Serverless",
   "main": "serverless-plugin-kinesis-consumer.js",
   "scripts": {
     "test": "nyc --all ava",
     "posttest": "eslint ."
   },
-  "author": "",
+  "author": "Doug Moscrop <doug.moscrop@gmail.com",
+  "keywords": [
+    "serverless",
+    "serverless plugin",
+    "aws"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dougmoscrop/serverless-plugin-kinesis-consumer"
+  },
   "license": "MIT",
   "devDependencies": {
     "ava": "^0.25.0",
