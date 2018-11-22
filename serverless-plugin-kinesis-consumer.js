@@ -109,7 +109,7 @@ module.exports = class KinesisConsumerPlugin {
           sourceCodePath,
           resource: {
             properties: {
-              ConsumerName: consumerName,
+              ConsumerName: this.qualifyConsumerName(consumerName),
               StreamARN: streamArn
             },
           },
@@ -175,7 +175,8 @@ module.exports = class KinesisConsumerPlugin {
             Action: [
               'kinesis:DescribeStreamSummary',
               'kinesis:ListShards',
-              'kinesis:SubscribeToShard',
+              'kinesis:GetShardIterator',
+              'kinesis:GetRecords',
             ],
             Resource: []
           }, {
@@ -189,6 +190,13 @@ module.exports = class KinesisConsumerPlugin {
         Roles: [role]
       }
     };
+  }
+
+  qualifyConsumerName(consumerName) {
+    const serviceName = this.serverless.service.service;
+    const stageName = this.serverless.service.provider.stage;
+
+    return `${serviceName}-${stageName}-${consumerName}`;
   }
 
 };
